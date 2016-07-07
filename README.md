@@ -6,7 +6,7 @@ collect current time, humidity, temperature, pressure, pitch, roll, yaw, acceler
 
 The "collect" table schema 
 
-CREATE TABLE collect ('time' DATETIME32, '' FLOAT, 'temperature' FLOAT, 'pressure' FLOAT, 'pitch' FLOAT, 'roll' FLOAT, 'yaw' FLOAT, 'acc_x' FLOAT, 'acc_y' FLOAT, 'acc_z' FLOAT)
+"CREATE TABLE collect ('time' DATETIME32, 'humidity' FLOAT, 'temperature' FLOAT, 'pressure' FLOAT, 'pitch' FLOAT, 'roll' FLOAT, 'yaw' FLOAT, 'acc_x' FLOAT, 'acc_y' FLOAT, 'acc_z' FLOAT)"
 
 
 test.py : 

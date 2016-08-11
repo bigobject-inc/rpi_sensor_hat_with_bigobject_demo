@@ -11,3 +11,6 @@ The "collect" table schema
 
 test.py : 
 just a test about accelerometer, rotate the logo by accelerometer value
+
+
+PS. you can add "python collectData.py &" in /etc/rc.local to perform the script when the raspberry pi boot.

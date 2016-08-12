@@ -40,7 +40,7 @@ if __name__ == "__main__":
                 if count%60 == 0:
                         count=0
                         #sense.show_message("*",scroll_speed=0.05)
-                        tmp_res = json.loads(getData("http://localhost:9090/cmd,"select count(*) from collect"))
+                        tmp_res = json.loads(getData("http://localhost:9090/cmd","select count(*) from collect"))
                         now_count = str(tmp_res['Content']['content'])
                         sense.show_message( now_count[2:-2] + " rows", scroll_speed=0.05)
                         sense.load_image("logo8.png")

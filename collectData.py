@@ -4,7 +4,8 @@ import json
 import sys
 from sense_hat import SenseHat
 from time import sleep
-from time import gmtime, strftime
+#from time import gmtime, strftime
+from time import strftime, localtime
 
 def cmd2JSON(cmd):
         return json.dumps({'Stmt':cmd,'Workspace':"",'Opts':{}})
@@ -63,7 +64,8 @@ if __name__ == "__main__":
                 acc_y = acceleration['y']
                 acc_z = acceleration['z']
                 
-                now = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+                #now = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+		now = strftime("%Y-%m-%d %H:%M:%S", localtime())
                 stmt = "insert into collect values('" + now + "','"
                 stmt = stmt + str(humidity) + "','"  + str(temp) + "','" + str(pressure) + "','" + str(pitch)
                 stmt = stmt + "','" + str(roll) + "','" + str(yaw) + "','" + str(acc_x)
